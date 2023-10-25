@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l9i$0-uhm-k*j9-z8+0kd-+vqf^z0jr19d0m^2#d5ebrj#26n6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','.vercel.app']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -74,7 +74,12 @@ WSGI_APPLICATION = 'MineGit.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 
 # Password validation
